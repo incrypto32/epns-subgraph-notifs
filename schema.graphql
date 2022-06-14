@@ -1,6 +1,11 @@
-type ExampleEntity @entity {
+type EpnsNotificationCounter @entity {
   id: ID!
-  count: BigInt!
-  number: BigInt! # uint256
-  sender: Bytes! # address
+  totalCount: BigInt!
+}
+
+type EpnsPushNotification @entity {
+  id: ID!
+  notificationNumber: BigInt!
+  recipient: String!
+  notification: String!
 }

@@ -1,4 +1,5 @@
-specVersion: 0.0.1
+specVersion: 0.0.4
+description: "v0.0.1"
 schema:
   file: ./schema.graphql
 dataSources:
@@ -8,12 +9,14 @@ dataSources:
     source:
       address: "0xd2ac42369869cba5169bd6a31aa14df0095688d3"
       abi: Storage
+      startBlock: 32171832
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
       language: wasm/assemblyscript
       entities:
-        - Stored
+        - EpnsNotificationCounter
+        - EpnsPushNotification
       abis:
         - name: Storage
           file: ./abis/Storage.json
